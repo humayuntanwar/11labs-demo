@@ -36,8 +36,8 @@ A modern web application that converts text to natural-sounding speech using Ele
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
-cd 11labs
+git clone https://github.com/humayuntanwar/11labs-demo.git
+cd 11labs-demo
 ```
 
 ### 2. Install Dependencies

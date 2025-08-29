@@ -15,7 +15,7 @@ export default function Home() {
             ElevenLabs Text to Speech
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Convert your text into natural-sounding speech using ElevenLabs' advanced AI voice technology.
+            Convert your text into natural-sounding speech using ElevenLabs&apos; advanced AI voice technology.
           </p>
         </div>
 

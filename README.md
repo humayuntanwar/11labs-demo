@@ -1,36 +1,150 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ElevenLabs Text-to-Speech Converter
 
-## Getting Started
+A modern web application that converts text to natural-sounding speech using ElevenLabs' advanced AI voice technology.
 
-First, run the development server:
+## 🚀 Live Demo
+
+**Production**: https://11labs-48hz9uq6s-humayuns-projects-3c62eba5.vercel.app
+
+## ✨ Features
+
+- **Text-to-Speech Conversion**: Convert any text into high-quality, natural-sounding speech
+- **Real-time Processing**: Instant audio generation using ElevenLabs API
+- **Audio Playback**: Play generated audio directly in the browser
+- **Download Support**: Download generated MP3 files
+- **Secure API Key Management**: Secure input and storage of API keys
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
+- **Dark Mode Support**: Automatic theme adaptation
+- **Modern UI**: Built with Next.js 15, TypeScript, and Tailwind CSS
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 15, React 18, TypeScript
+- **Styling**: Tailwind CSS
+- **API**: ElevenLabs Text-to-Speech API
+- **Deployment**: Vercel
+- **Package Manager**: npm
+
+## 📋 Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+- ElevenLabs API key
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone <your-repo-url>
+cd 11labs
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Set Up Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```bash
+ELEVENLABS_API_KEY=your_elevenlabs_api_key_here
+```
+
+### 4. Get Your ElevenLabs API Key
+
+1. Visit [ElevenLabs Dashboard](https://elevenlabs.io/app/settings/api-keys)
+2. Create a new API key
+3. Copy the key to your `.env.local` file
+
+### 5. Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎯 Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Enter API Key**: Input your ElevenLabs API key in the configuration section
+2. **Type Text**: Enter the text you want to convert to speech
+3. **Convert**: Click "Convert to Speech" to generate audio
+4. **Play/Download**: Play the audio or download the MP3 file
 
-## Learn More
+## 🔧 API Configuration
 
-To learn more about Next.js, take a look at the following resources:
+The application uses the following ElevenLabs settings:
+- **Voice ID**: `JBFqnCBsd6RMkjVDRZzb` (Default voice)
+- **Model**: `eleven_multilingual_v2` (High-quality multilingual model)
+- **Output Format**: MP3 at 44.1kHz, 128kbps
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+├── app/
+│   ├── api/
+│   │   └── text-to-speech/
+│   │       └── route.ts          # API endpoint for TTS conversion
+│   ├── globals.css               # Global styles
+│   ├── layout.tsx                # Root layout
+│   └── page.tsx                  # Main page component
+├── components/
+│   ├── ApiKeyInput.tsx           # API key input component
+│   └── TextToSpeech.tsx         # Main TTS interface
+└── ...
+```
 
-## Deploy on Vercel
+## 🚀 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Vercel (Recommended)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Install Vercel CLI: `npm i -g vercel`
+2. Deploy: `vercel --prod`
+
+### Manual Deployment
+
+```bash
+npm run build
+npm start
+```
+
+## 🔒 Security
+
+- API keys are stored securely in environment variables
+- Client-side API key input is handled securely
+- No sensitive data is exposed in the frontend code
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature-name`
+3. Commit changes: `git commit -m 'Add feature'`
+4. Push to branch: `git push origin feature-name`
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🙏 Acknowledgments
+
+- [ElevenLabs](https://elevenlabs.io/) for their amazing text-to-speech API
+- [Next.js](https://nextjs.org/) for the excellent React framework
+- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
+
+## 📞 Support
+
+If you encounter any issues or have questions:
+
+1. Check the [ElevenLabs API documentation](https://docs.elevenlabs.io/)
+2. Review the [Next.js documentation](https://nextjs.org/docs)
+3. Open an issue in this repository
+
+---
+
+**Note**: Make sure to keep your ElevenLabs API key secure and never commit it to version control.
